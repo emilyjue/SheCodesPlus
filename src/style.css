@@ -24,6 +24,10 @@ img {
   bottom: 80px;
 }
 
+footer {
+  font-size: 10px;
+}
+
 .header {
   margin: 20px 0;
   display: block;
