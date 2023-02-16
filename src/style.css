@@ -1,0 +1,62 @@
+body {
+  font-family: "Merriweather", serif;
+  padding: 0 30px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 34px;
+  font-family: "Merriweather", serif;
+}
+
+h2,
+h4,
+h5,
+p {
+  font-family: "Merriweather", serif;
+}
+
+img {
+  position: relative;
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  bottom: 80px;
+}
+
+.header {
+  margin: 20px 0;
+  display: block;
+  position: relative;
+  top: 60px;
+}
+
+.text-muted {
+  font-size: 8px;
+}
+
+.form-check {
+  font-size: 12px;
+}
+
+.info {
+  font-size: 12px;
+}
+
+.card-info {
+  font-size: 10px;
+  opacity: 90;
+}
+
+.card-body {
+  text-align: center;
+}
+
+#current-time {
+  font-size: 10px;
+  margin: auto;
+}
+
+#temp-form {
+  font-size: 11px;
+}
