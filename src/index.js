@@ -22,6 +22,7 @@ function search(event) {
 }
 
 function searchTemp(response) {
+  UnitChoice1.checked = true;
   let tempElement = document.querySelector("h2");
   let roundTemp = Math.round(response.data.temperature.current);
   tempElement.innerHTML = `${roundTemp}°F`;
@@ -94,6 +95,7 @@ function handlePosition(position) {
 }
 
 function currentTemp(response) {
+  UnitChoice1.checked = true;
   let tempElement = document.querySelector("h1");
   let tempFar = document.querySelector("h2");
   console.log(response.data);
