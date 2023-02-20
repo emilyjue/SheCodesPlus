@@ -1,12 +1,16 @@
 body {
   font-family: "Merriweather", serif;
-  padding: 0 30px;
 }
 
 h1 {
-  font-weight: 900;
-  font-size: 34px;
+  font-weight: 100;
+  font-size: 24px;
   font-family: "Merriweather", serif;
+  color: #878787;
+  height: 27.77778px;
+  line-height: 28.8px;
+  padding: 30px auto;
+  position: relative;
 }
 
 h2,
@@ -14,18 +18,59 @@ h4,
 h5,
 p {
   font-family: "Merriweather", serif;
+  font-size: 10px;
 }
 
 img {
-  position: relative;
-  text-align: right;
-  display: block;
-  margin-left: auto;
-  bottom: 80px;
+  margin: 0;
+  padding: 0px;
 }
 
 footer {
   font-size: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  text-align: center;
+  display: block;
+}
+
+form {
+  text-align: center;
+  border: 1px solid #f9f7fe;
+  margin-top: 4px;
+  color: #8064e9;
+  padding: 30px auto;
+  display: block;
+}
+
+.weather-app {
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+}
+
+.button {
+  border-radius: 25px;
+  border: 1px solid #8064e9;
+  background: #8064e9;
+  color: #fff;
+  font-size: 11px;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 15px;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #5e41a7;
 }
 
 .header {
@@ -35,15 +80,21 @@ footer {
   top: 60px;
 }
 
+.current {
+  margin: 40px;
+  position: relative;
+  top: 60px;
+}
+
+.next {
+  margin-top: 40px;
+}
+
 .text-muted {
   font-size: 8px;
 }
 
 .form-check {
-  font-size: 12px;
-}
-
-.info {
   font-size: 12px;
 }
 
@@ -63,4 +114,29 @@ footer {
 
 #temp-form {
   font-size: 11px;
+}
+
+#weather-description {
+  font-size: 12px;
+  position: relative;
+  top: 20px;
+}
+
+#wind-speed {
+  font-size: 12px;
+  position: relative;
+  top: 20px;
+}
+
+#city-form {
+  text-align: right;
+}
+
+#current-form {
+  text-align: left;
+}
+
+#current-left {
+  position: relative;
+  top: 70px;
 }
