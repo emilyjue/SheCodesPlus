@@ -1,6 +1,6 @@
 let oldTemp = 0;
 let oldWind = 0;
-let now = new Date();
+let apiKey = "aa64f245c9c8be5o955890a153t25adb";
 let day = [
   "Sunday",
   "Monday",
@@ -10,8 +10,6 @@ let day = [
   "Friday",
   "Saturday",
 ];
-let hour = now.getHours();
-let minutes = now.getMinutes();
 
 function search(event) {
   event.preventDefault();
@@ -41,19 +39,23 @@ function searchTemp(response) {
   descElement.innerHTML = description;
   windElement.innerHTML = `Windspeed: ${wind}mph`;
   oldWind = wind;
+  getTime();
 }
-let form = document.querySelector("#city-form");
-form.addEventListener("submit", search);
 
-let time = document.querySelector("#current-time");
-if (minutes < 10 && hour < 10) {
-  time.innerHTML = day[now.getDay()] + " 0" + hour + ":0" + minutes;
-} else if (minutes < 10) {
-  time.innerHTML = day[now.getDay()] + " " + hour + ":0" + minutes;
-} else if (hour < 10) {
-  time.innerHTML = day[now.getDay()] + " 0" + hour + ":" + minutes;
-} else {
-  time.innerHTML = day[now.getDay()] + " " + hour + ":" + minutes;
+function getTime() {
+  let now = new Date();
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
+  let time = document.querySelector("#current-time");
+  if (minutes < 10 && hour < 10) {
+    time.innerHTML = day[now.getDay()] + " 0" + hour + ":0" + minutes;
+  } else if (minutes < 10) {
+    time.innerHTML = day[now.getDay()] + " " + hour + ":0" + minutes;
+  } else if (hour < 10) {
+    time.innerHTML = day[now.getDay()] + " 0" + hour + ":" + minutes;
+  } else {
+    time.innerHTML = day[now.getDay()] + " " + hour + ":" + minutes;
+  }
 }
 function switchUnit(event) {
   event.preventDefault();
@@ -83,10 +85,6 @@ function switchUnit(event) {
     newWindUnit.innerHTML = "Windspeed: " + newWind + "m/s";
   }
 }
-let tempUnit = document.querySelector("#temp-form");
-tempUnit.addEventListener("change", switchUnit);
-
-let apiKey = "aa64f245c9c8be5o955890a153t25adb";
 
 function handlePosition(position) {
   let lat = position.coords.latitude;
@@ -115,6 +113,7 @@ function currentTemp(response) {
   descElement.innerHTML = description;
   windElement.innerHTML = `Windspeed: ${wind}mph`;
   oldWind = wind;
+  getTime();
 }
 
 function currentCity(event) {
@@ -122,7 +121,14 @@ function currentCity(event) {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
+let form = document.querySelector("#city-form");
+form.addEventListener("submit", search);
+
+let tempUnit = document.querySelector("#temp-form");
+tempUnit.addEventListener("change", switchUnit);
+
 let cform = document.querySelector("#current-form");
 cform.addEventListener("submit", currentCity);
 
 navigator.geolocation.getCurrentPosition(handlePosition);
+getTime();
