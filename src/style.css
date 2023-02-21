@@ -18,18 +18,19 @@ h4,
 h5,
 p {
   font-family: "Merriweather", serif;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 img {
   margin: 0;
   padding: 0px;
+  text-align: center;
 }
 
 footer {
   font-size: 10px;
-  padding: 20px;
-  margin: 30px auto;
+  padding: 0px;
+  margin: 0px auto;
   text-align: center;
   display: block;
 }
@@ -45,7 +46,7 @@ form {
 
 .weather-app {
   padding: 20px;
-  margin: 30px auto;
+  margin: 10px auto;
   max-width: 600px;
   border: 1px solid #dadde1;
   border-radius: 5px;
@@ -73,6 +74,10 @@ form {
   background: #5e41a7;
 }
 
+.card {
+  display: inline-block;
+}
+
 .header {
   margin: 20px 0;
   display: block;
@@ -81,7 +86,7 @@ form {
 }
 
 .current {
-  margin: 40px;
+  margin: 10px;
   position: relative;
   top: 60px;
 }
@@ -99,12 +104,20 @@ form {
 }
 
 .card-info {
-  font-size: 10px;
+  font-size: 8px;
   opacity: 90;
+}
+.card-wind {
+  font-size: 8px;
+  opacity: 90;
+}
+.card-humidity {
+  font-size: 8px;
 }
 
 .card-body {
   text-align: center;
+  line-height: 0.5em;
 }
 
 #current-time {
@@ -114,18 +127,6 @@ form {
 
 #temp-form {
   font-size: 11px;
-}
-
-#weather-description {
-  font-size: 12px;
-  position: relative;
-  top: 20px;
-}
-
-#wind-speed {
-  font-size: 12px;
-  position: relative;
-  top: 20px;
 }
 
 #city-form {
@@ -138,5 +139,19 @@ form {
 
 #current-left {
   position: relative;
-  top: 70px;
+  top: 40px;
+}
+
+#current-right {
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  top: -15px;
+  padding: 0;
+  line-height: 0.5em;
+}
+
+#forecast {
+  text-align: center;
+  display: inline-block;
 }

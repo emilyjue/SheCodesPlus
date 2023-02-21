@@ -88,66 +88,26 @@
             <h2></h2>
             <p id="current-time"></p>
           </div>
-          <div class="col">
+          <div class="col" id="current-right">
             <p id="weather-icon"></p>
             <p class="info" id="weather-description"></p>
-            <p id="wind-speed">Wind speed:</p>
+            <p id="wind-speed"></p>
+            <p id="current-humid"></p>
           </div>
         </div>
       </div>
       <br />
 
       <div class="next">
-        <h4>Next 5 days</h4>
+        <h4 id="next"></h4>
 
-        <div class="card-group">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">M</h5>
-              <p class="emoji">☀️</p>
-              <p class="card-text">13&#176;C / <strong>23&#176;F</strong></p>
-              <p class="card-info">Wind: 4mph<br />Humidity:60%</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">T</h5>
-              <p class="emoji">🌤</p>
-              <p class="card-text">13&#176;C / <strong>23&#176;F</strong></p>
-              <p class="card-info">Wind: 4mph<br />Humidity:60%</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">W</h5>
-              <p class="emoji">🌦</p>
-              <p class="card-text">13&#176;C / <strong>23&#176;F</strong></p>
-              <p class="card-info">Wind: 4mph<br />Humidity:60%</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Th</h5>
-              <p class="emoji">⛈</p>
-              <p class="card-text">13&#176;C / <strong>23&#176;F</strong></p>
-              <p class="card-info">Wind: 4mph<br />Humidity:60%</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">F</h5>
-              <p class="emoji">☔️</p>
-              <p class="card-text">13&#176;C / <strong>23&#176;F</strong></p>
-              <p class="card-info">Wind: 4mph<br />Humidity:60%</p>
-            </div>
-          </div>
-        </div>
+        <div class="card-group" id="forecast"></div>
       </div>
       <script src="src/index.js"></script>
     </div>
   </body>
   <footer>
     <a href="https://github.com/emilyjue/SheCodesPlus">Open-source code </a> by
-    Emily Jue
+    Emily Jue for SheCodesPlus
   </footer>
 </html>
